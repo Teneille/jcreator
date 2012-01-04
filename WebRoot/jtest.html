@@ -1,0 +1,22 @@
+ 	    <script type="text/javascript" src="https://static.aliloan.com/afms/js/jquery.js"></script> 
+ 	    
+ 	    <div id="ss">ddd</div>
+ 	    
+ <script>
+ var changed={ item:"banana", act: "eating" };
+
+var original={
+        item: "chair",
+        act: "sitting in",
+       ask: function(){
+              return "who's been "+this.act+" my "+this.item;
+        }
+}; 
+alert(original.ask.call(changed));
+ 
+
+
+
+ var xxx= jQuery("#ss");
+ alert(xxx.html())
+ </script>
