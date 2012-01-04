@@ -1,0 +1,5 @@
+1：不使用 onSubmit 提交时验证 
+	var validator = $("#ruleForm").validate({meta: "validate"});
+	validator.form() true false 判断
+
+  
