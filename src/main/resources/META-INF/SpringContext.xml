@@ -10,6 +10,7 @@
 		init-method="init" destroy-method="destory">
 		<property name="configPath">
 			<list>
+				<value>META-INF/dataSource/*.xml</value>
 				<!-- <value>META-INF/spring/biz-whitelist.xml</value> -->
 			</list>
 		</property>
