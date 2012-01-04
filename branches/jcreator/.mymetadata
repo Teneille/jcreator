@@ -5,7 +5,7 @@
   id="myeclipse.1324564662468"
   context-root="/"
   j2ee-spec="5.0"
-  archive="ROOT.war">
+  archive="jcreator.war">
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />
   </attributes>

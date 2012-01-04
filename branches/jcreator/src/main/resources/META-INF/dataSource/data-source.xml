@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+	<!-- dataSource -->
+	
+	<bean class="com.alifi.jgenerator.common.utils.DataSourceUtil">
+		<property name="dateSourceMap" ref="myd"/>
+	</bean>
+	<bean id="myd" class="com.alifi.jgenerator.common.utils.DateSourceMap">
+		<constructor-arg index="1" ref="dataSource"/>
+		<constructor-arg index="0" value="mysql数据库"/>
+	</bean>
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<description>
+			mysql
+		</description>
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://localhost:3306/test
+			</value>
+		</property>
+		<property name="username">
+			<value>root</value>
+		</property>
+		<property name="password">
+			<value>12345</value>
+		</property>
+		<property name="maxActive">
+			<value>10</value>
+		</property>
+		<property name="minIdle">
+			<value>5</value>
+		</property>
+		<property name="maxIdle">
+			<value>10</value>
+		</property>
+	</bean>
+
+	<!--
+		============================= ibaits =============================
+		<bean id="lobHandler"
+		class="org.springframework.jdbc.support.lob.DefaultLobHandler"
+		lazy-init="true" />
+	-->
+	<!--
+		<bean id="sqlMapClient"
+		class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="dataSource" ref="dataSource" /> <property
+		name="lobHandler" ref="lobHandler" /> <property name="configLocation"
+		value="/META-INF/sqlmap-config.xml" /> </bean>
+	-->
+	<!--
+		=========================== transaction ==========================
+	-->
+	<!-- transaction-->
+	<!--
+		<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" /> </bean>
+
+		<tx:annotation-driven proxy-target-class="false"
+		transaction-manager="transactionManager" />
+	-->
+</beans>
