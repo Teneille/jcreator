@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:services="http://www.alibaba.com/schema/services" xmlns:uris="http://www.alibaba.com/schema/services/uris"
+	xmlns="http://www.alibaba.com/schema/services/uris"
+	xmlns:uri-interceptors="http://www.alibaba.com/schema/services/uris/interceptors"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.alibaba.com/schema/services http://localhost:8080/schema/services.xsd
+        http://www.alibaba.com/schema/services/uris http://localhost:8080/schema/services-uris.xsd
+        http://www.alibaba.com/schema/services/uris/interceptors http://localhost:8080/schema/services-uris-interceptors.xsd
+        http://www.springframework.org/schema/beans http://localhost:8080/schema/www.springframework.org/schema/beans/spring-beans.xsd
+    ">
+
+	<services:uris>
+		<uri id="server" />
+		<!--
+        ***********************************************************************
+        * 模块路径： $ {commonModule}.setTarget('json.vm').addQueryData('name', 'value')
+        ***********************************************************************
+        -->
+        <turbine-uri id="homeModule" extends="server" exposed="true">
+            <componentPath>/</componentPath>
+        </turbine-uri>
+        <turbine-uri id="commonModule" extends="server" exposed="true">
+            <componentPath>/common</componentPath>
+        </turbine-uri>
+        <turbine-uri id="jconfigModule" extends="server" exposed="true">
+            <componentPath>/</componentPath>
+        </turbine-uri>
+
+
+		<!-- 
+			*********************************************************************** 
+			* 静态资源服务器-图片： $imageServer.getURI('afms/css/afms.css') 
+			*********************************************************************** 
+		-->
+		<turbine-content-uri id="imageServer" exposed="true">
+			<serverURI>https://static.aliloan.com</serverURI>
+		</turbine-content-uri>
+
+		<!-- 
+			*********************************************************************** 
+			* 静态资源服务器-样式： $styleServer.getURI('afms/css/afms.css') 
+			*********************************************************************** 
+		-->
+		<turbine-content-uri id="styleServer" exposed="true">
+			<serverURI>https://static.aliloan.com</serverURI>
+		</turbine-content-uri>
+
+		<!-- 
+			*********************************************************************** 
+			* 静态资源服务器-javascript： $jsServer.getURI('afms/css/afms.css') 
+			*********************************************************************** 
+		-->
+		<turbine-content-uri id="jsServer" exposed="true">
+			<serverURI>https://static.aliloan.com</serverURI>
+		</turbine-content-uri>
+
+		<!--
+        ***********************************************************************
+        * 静态资源： $ {cssContent}.getURI('common.css')
+        ***********************************************************************
+        -->
+        <turbine-content-uri id="cssContent" exposed="true" extends="server">
+            <prefixPath>/static/css</prefixPath>
+        </turbine-content-uri>
+        <turbine-content-uri id="jsContent" exposed="true" extends="server">
+            <prefixPath>/static/js</prefixPath>
+        </turbine-content-uri>
+        <turbine-content-uri id="imgContent" exposed="true" extends="server">
+            <prefixPath>/static/img</prefixPath>
+        </turbine-content-uri>
+	</services:uris>
+
+</beans:beans>
