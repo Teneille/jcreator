@@ -4,50 +4,7 @@
 	<classpathentry kind="src" path="src/main/resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/headquarters.commons.fasttext-1.2.8-cn-share.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.commons.beanutils-1.7.0.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.commons.codec-1.3.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.commons.collections-3.2.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.commons.configuration-1.5a.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.commons.digester-1.8.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.commons.fileupload-1.2.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.commons.io-1.4.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.commons.jelly-1.0-RC1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.commons.jexl-1.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.commons.lang-2.4.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.commons.logging-99.0-does-not-exist.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.ecs-1.4.2.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.log4j-1.2.8.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.oro-2.0.8.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.taglib.jstl-0.0.0.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.taglib.jstl.support-0.0.0.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta.velocity-1.6.4.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/java.j2ee-1.4.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/misc.htmlparser-0.0.0.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/objectweb.asm-0.0.0.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/objectweb.asm.attrs-0.0.0.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/org.slf4j.jcl104-over-slf4j-1.5.6.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/org.slf4j.slf4j-api-1.5.6.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/org.slf4j.slf4j-log4j12-1.5.6.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/sourceforge.cglib-nodep-2.1_3.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/sourceforge.freemarker-2.3.15.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/sourceforge.jaxen-1.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/sourceforge.saxpath-1.0.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/sourceforge.spring-2.5.6.SEC02.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/sourceforge.spring.mock-2.0.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/sourceforge.spring.modules.webmvc-2.5.6.SEC02.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/sourceforge.spring.weaving.aspects-2.5.4.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/webx2-2.0.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/webx3.compat-3.0.0-GA.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/webx3.core-3.0.0-GA.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xml.apis-0.0.0.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xml.apis.css-1.3.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xml.commons-resolver-0.0.0.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xml.dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xml.nekohtml-1.9.9.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xml.xerces-0.0.0.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xml.xmlgraphics__batik-css-1.7.jar-1.7.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/xml.xmlgraphics__batik-util-1.6-1.jar-1.7.jar"/>
 	<classpathentry kind="lib" path="D:/.m2/repository/com/alibaba/platform/shared/fastjson/1.1.4/fastjson-1.1.4.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/webxLib"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
