@@ -1,15 +1,53 @@
 package com.alifi.jgenerator.common.utils;
 
-import java.util.HashMap;
-
 import javax.sql.DataSource;
 
-public class DateSourceMap extends HashMap<String, DataSource> {
+import org.apache.commons.lang.builder.EqualsBuilder;
+import org.apache.commons.lang.builder.HashCodeBuilder;
+import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang.builder.ToStringStyle;
 
-	private static final long serialVersionUID = 6464164517649533358L;
+public class DateSourceMap {
 
-	public DateSourceMap(String name, DataSource dataSource) {
-		this.put(name, dataSource);
+	private String key;
+	private String describe;
+	private DataSource dataSource;
+
+	public String getKey() {
+		return key;
+	}
+
+	public void setKey(String key) {
+		this.key = key;
+	}
+
+	public String getDescribe() {
+		return describe;
+	}
+
+	public void setDescribe(String describe) {
+		this.describe = describe;
+	}
+
+	public DataSource getDataSource() {
+		return dataSource;
+	}
+
+	public void setDataSource(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this,
+				ToStringStyle.MULTI_LINE_STYLE);
+	}
+
+	public boolean equals(Object o) {
+		return EqualsBuilder.reflectionEquals(this, o);
+	}
+
+	public int hashCode() {
+		return HashCodeBuilder.reflectionHashCode(this);
 	}
 
 }

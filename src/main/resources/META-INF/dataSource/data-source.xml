@@ -11,9 +11,6 @@
 	<!-- dataSource -->
 	
 	<bean class="com.alifi.jgenerator.common.utils.DataSourceUtil">
-		<property name="dateSourceMap" ref="myd"/>
-	</bean>
-	<bean id="myd" class="com.alifi.jgenerator.common.utils.DateSourceMap">
 		<constructor-arg index="1" ref="dataSource"/>
 		<constructor-arg index="0" value="mysql数据库"/>
 	</bean>
@@ -26,8 +23,7 @@
 			<value>com.mysql.jdbc.Driver</value>
 		</property>
 		<property name="url">
-			<value>jdbc:mysql://localhost:3306/test
-			</value>
+			<value>jdbc:mysql://localhost:3306/iforums</value>
 		</property>
 		<property name="username">
 			<value>root</value>
