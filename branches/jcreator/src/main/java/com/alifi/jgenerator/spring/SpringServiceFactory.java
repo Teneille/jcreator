@@ -15,7 +15,10 @@
  */
 package com.alifi.jgenerator.spring;
 
-import java.util.Iterator;
+import java.sql.DatabaseMetaData;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -59,14 +62,30 @@ public class SpringServiceFactory {
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(
 				"META-INF/SpringContext.xml");
-		DataSource dataSource = (DataSource) SpringServiceFactory
-				.getService("dataSource");
-		
-		BasicDataSource dataSourcex =(BasicDataSource) SpringServiceFactory
-		.getService("dataSource");
-		
-		
-		for(DateSourceMap m:DataSourceUtil.dataSourceMaps){
+
+		for (DateSourceMap m : DataSourceUtil.dataSourceMaps) {
+
+			DataSource ds = m.getDataSource();
+			try {
+				DatabaseMetaData dmd = ds.getConnection().getMetaData();
+				ResultSet rs = dmd.getTables("", "", null, null);
+				ResultSetMetaData rsmd = rs.getMetaData();
+				while (rs.next()) {
+					System.out.println("-----------------------");
+					System.out.println(rs.getString("TABLE_CAT"));
+					System.out.println(rs.getString("TABLE_SCHEM"));
+					System.out.println(rs.getString("TABLE_NAME"));
+					System.out.println(rs.getString("TABLE_TYPE"));
+					System.out.println(rs.getString("REMARKS"));
+				}
+
+				//int numberOfColumns = rsmd.getColumnCount();
+				// for (int i = 1; i <= numberOfColumns; i++)
+				// System.out.println(rsmd.getColumnName(i));
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+
 			System.out.println(m.toString());
 		}
 	}

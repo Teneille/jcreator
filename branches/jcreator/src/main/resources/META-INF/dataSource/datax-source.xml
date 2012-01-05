@@ -11,9 +11,6 @@
 	<!-- dataSource -->
 	
 	<bean class="com.alifi.jgenerator.common.utils.DataSourceUtil">
-		<property name="dateSourceMap" ref="mydx"/>
-	</bean>
-	<bean id="mydx" class="com.alifi.jgenerator.common.utils.DateSourceMap">
 		<constructor-arg index="1" ref="xdataSource"/>
 		<constructor-arg index="0" value="mysqlx数据库"/>
 	</bean>
@@ -26,14 +23,13 @@
 			<value>com.mysql.jdbc.Driver</value>
 		</property>
 		<property name="url">
-			<value>jdbc:mysql://localhost:3306/test
-			</value>
+			<value>jdbc:mysql://localhost:3306/mysql</value>
 		</property>
 		<property name="username">
 			<value>root</value>
 		</property>
 		<property name="password">
-			<value>123457</value>
+			<value>12345</value>
 		</property>
 		<property name="maxActive">
 			<value>10</value>
