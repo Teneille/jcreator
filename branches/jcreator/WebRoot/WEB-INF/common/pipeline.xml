@@ -47,13 +47,13 @@
                     <!-- 执行不带模板的screen，生成json，默认无layout。 -->
                     <pl-conditions:target-extension-condition extension="json" />
                     <performScreen />
-                    <valve class="com.alifi.jgenerator.common.perform.valve.PerformJsonValve"/>
+                    <valve class="com.alifi.web.valve.PerformJsonValve"/>
                 </when>
                  <when>
                     <!-- 执行不带模板的screen，生成js验证脚本，默认无layout。 -->
                     <pl-conditions:target-extension-condition extension="vjs" />
                     <!--<performScreen />-->
-                    <valve class="com.alifi.jgenerator.common.perform.valve.PerformValidateValve"/>
+                    <valve class="com.alifi.web.valve.PerformValidateValve"/>
                 </when>
                 <otherwise>
                     <!-- 将控制交还给servlet engine。 -->
