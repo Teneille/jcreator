@@ -18,7 +18,7 @@
 
         <!-- 子模块模板目录：/*/templates -->
         <!-- 全局模板目录：  /*/templates/global -->
-        <resource-alias pattern="/*/templates/global" name="/webroot/common/templates" />
+        <resource-alias pattern="/*/templates/global" name="/webroot/templates/common" />
 
         <!-- 配置文件根目录：/conf -->
         <resource-alias pattern="/conf" name="/webroot/WEB-INF" />

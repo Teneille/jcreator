@@ -10,7 +10,7 @@
 
 	<!-- dataSource -->
 	
-	<bean class="com.alifi.jgenerator.common.utils.DataSourceUtil">
+	<bean class="com.alifi.jgenerator.utils.DataSourceUtil">
 		<constructor-arg index="1" ref="dataSource"/>
 		<constructor-arg index="0" value="mysql数据库"/>
 	</bean>

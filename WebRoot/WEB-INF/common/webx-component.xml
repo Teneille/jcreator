@@ -24,6 +24,6 @@
 		<control-tool />
 		<uris-tool />
 		<pull-factories:factory
-			class="com.alifi.jgenerator.webx.ext.JGrenratorToolFactory" />
+			class="com.alifi.web.ext.JGrenratorToolFactory" />
 	</services:pull>
 </beans:beans>

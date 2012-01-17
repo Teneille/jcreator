@@ -24,7 +24,7 @@
         <turbine-uri id="commonModule" extends="server" exposed="true">
             <componentPath>/common</componentPath>
         </turbine-uri>
-        <turbine-uri id="jconfigModule" extends="server" exposed="true">
+        <turbine-uri id="configModule" extends="server" exposed="true">
             <componentPath>/</componentPath>
         </turbine-uri>
 
