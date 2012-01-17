@@ -6,12 +6,19 @@
 	xsi:schemaLocation="http://repo.alibaba-inc.com/schema/dubbo http://repo.alibaba-inc.com/schema/dubbo/dubbo-component.xsd
 			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
 			http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd">
-	<bean class="com.alifi.jgenerator.spring.SpringServiceFactory"
+	<bean class="com.alifi.web.spring.SpringServiceFactory"
 		init-method="init" destroy-method="destory">
 		<property name="configPath">
 			<list>
 				<value>META-INF/dataSource/*.xml</value>
-				<!-- <value>META-INF/spring/biz-whitelist.xml</value> -->
+			</list>
+		</property>
+	</bean>
+	<bean class="com.alifi.jgenerator.spring.SpringGeneratorFactory"
+		init-method="init" destroy-method="destory">
+		<property name="configPath">
+			<list>
+				<value>META-INF/dataSource/*.xml</value>
 			</list>
 		</property>
 	</bean>
